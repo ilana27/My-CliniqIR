@@ -22,7 +22,7 @@ Code for the paper Unsupervised Diagnostic Decision Support via Information Retr
 
 ```
   cd Data_Preprocessing
-  Python Data_Preprocessing/Extract_Pubmed_Concepts.py
+  Python Extract_Pubmed_Concepts.py
   ```
 3. 
 
