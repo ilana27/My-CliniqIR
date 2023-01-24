@@ -23,7 +23,7 @@ This is the repository for the paper Unsupervised Diagnostic Decision Support vi
 Each model requires input data to be in a certain format. Sample files have been provided in the Datasets and CliniqIR_model folder. See/Run the Data_Pre_processing_MIMIC_III.py for MIMIC-III data pre-processing.
 
 ## Use CliniqIR 
-The index has four fields: pmid, UMLS concepts of an abstract, abstract title and abstract text with the latter two searchable. The source java files are also provided for custom use.
+The index has four fields: pmid, UMLS concepts of an abstract, abstract title and abstract text with the latter two searchable. The source java files have also been to allow for custom use.
 
 ### Building the PubMed Index
 1. Download PubMed Abstracts. Abstracts should be in the directory "CliniqIR_model/Pubmed".
