@@ -1,2 +1,2 @@
-cancer
-fever
+cancer is a deadly disease
+fever is a major symptom for most ailments
