@@ -1,7 +1,7 @@
 # CliniqIR: Unsupervised Diagnostic Decision Support via Information Retrieval
 
 This is the repository for the paper Unsupervised Diagnostic Decision Support via Information Retrieval
- 
+
 ## Datasets
 1. Download [PubMed Abstracts](https://ftp.ncbi.nlm.nih.gov/pubmed/baseline/).
 
@@ -15,10 +15,12 @@ This is the repository for the paper Unsupervised Diagnostic Decision Support vi
 3. Download [DC3 datasets](https://github.com/codiag-public/dc3).
 
 ## Requirements
-1. [QuickUMLS](https://github.com/Georgetown-IR-Lab/QuickUMLS)
+1. Install [QuickUMLS](https://github.com/Georgetown-IR-Lab/QuickUMLS)
 2. jdk-17.0.2
 3. [requirements.txt](https://github.com/rsinghlab/CliniqIR/blob/efef52f87a7fba8faa4a05f209f85ef6daf08fec/requirements.txt)
 
+## Data Preprocessing
+Each model requires input data to be in a certain format. Sample files have been provided in the Datasets and CliniqIR_model folder. See/Run the Data_Pre_processing_MIMIC_III.py for MIMIC-III data pre-processing.
 
 ## Use CliniqIR 
 The index has four fields: pmid, UMLS concepts of an abstract, abstract title and abstract text with the latter two searchable. The source java files are also provided for custom use.
@@ -50,7 +52,10 @@ The index has four fields: pmid, UMLS concepts of an abstract, abstract title an
 2. Obtain CliniqIR results by searching the PubMed index.
 3. Obtain CliniqIR ranks and get ensemble results by running Evaluate_Mimic-III.py which can be found in the CliniqIR_model directory.
 
-### To use zero shot baselines
+### To use other Clinical BERT or the zero shot baselines
+1. Run Clinical_BERT.py to use Clinical BERT
+2. Run Zero_shot_baselines.py to use the zero-shot baselines.
+
 
 ## Credits
 Some of the structure in this repo was adopted from https://github.com/ziy/medline-indexer
