@@ -40,21 +40,23 @@ The index has four fields: pmid, UMLS concepts of an abstract, abstract title an
   java -jar Build_Pubmed_Index.jar -cp LuceneJARFiles2
 ```
 ### Searching the PubMed Index
-
-1. Prepare Queries and save it in the directory "CliniqIR_model/Queries.txt"
-2. Search the index 
+1. Filter text queries by running QuickUMLS_FIltering.py in the Data_preprocessing directory.
+2. Save filtered queries in the directory "CliniqIR_model/Queries.txt"
+3. Search the index 
 ```
   cd CliniqIR_model
   java -jar Search_Pubmed_Index.jar -cp LuceneJARFiles2
 ```
 ### Evaluate CliniqIR and obtain ensemble results for MIMIC-III.
-1. Get Clinical BERT ranks by running Clinical_BERT.py which can be found in the Bert_models directory. 
-2. Obtain CliniqIR results by searching the PubMed index.
-3. Obtain CliniqIR ranks and get ensemble results by running Evaluate_Mimic-III.py which can be found in the CliniqIR_model directory.
+1. Calculate the PubMed collection frequency of each disease class label by running PubMed_Frequency.py in the Data preprocessing directory.
+2. Get Clinical BERT's ranks by running Clinical_BERT.py which can be found in the Bert_models directory. 
+3. Obtain CliniqIR's query results by searching the PubMed index.
+4. Obtain CliniqIR ranks and get ensemble results by running Evaluate_Mimic-III.py which can be found in the CliniqIR_model directory.
 
 ### To use other Clinical BERT or the zero shot baselines
 1. Run Clinical_BERT.py to use Clinical BERT
 2. Run Zero_shot_baselines.py to use the zero-shot baselines.
+
 
 
 ## Credits
