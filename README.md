@@ -51,7 +51,7 @@ The index has four fields: pmid, UMLS concepts of an abstract, abstract title an
 1. Calculate the PubMed collection frequency of each disease class label by running PubMed_Frequency.py in the Data preprocessing directory.
 2. Get Clinical BERT's ranks by running Clinical_BERT.py which can be found in the Bert_models directory. 
 3. Obtain CliniqIR's query results by searching the PubMed index.
-4. Obtain CliniqIR ranks and get ensemble results by running Evaluate_Mimic-III.py which can be found in the CliniqIR_model directory.
+4. Obtain CliniqIR's ranks and get ensemble results by running Evaluate_Mimic-III.py which can be found in the CliniqIR_model directory.
 
 ### To use other Clinical BERT or the zero shot baselines
 1. Run Clinical_BERT.py to use Clinical BERT
