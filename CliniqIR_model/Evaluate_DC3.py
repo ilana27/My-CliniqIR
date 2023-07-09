@@ -179,7 +179,6 @@ def Compute_Ranks_by_TFIDF(dataxx,Collection_Size,IDF_dicts):
     dataxx['TFIDF_Rank'] = pd.Series(Query_ranks).values
     return dataxx
 
-
 from statistics import mean
 def getMRR(df, Rankcol):
     rank_1 = []
@@ -215,13 +214,15 @@ data =  prepare_query_results(data)
 df['cui_code']=df['cui_code'].str.split(',')
 accepted_list = [item for sublist in df['cui_code'].tolist() for item in sublist]
 
-#Filter by unique labels
+# #Filter by unique labels
 data['Filtered_Concepts'] = data.apply(lambda x: Filter_by_Concepts(x.Concepts, accepted_lists=accepted_list), axis=1)
+
+data=UpdateResults(data, df)
 
 data = EvaluatebyConcepts(data,"Filtered_Concepts",num_Abstracts=100)
 
-#select data based on conditions.
-pub = pd.read_csv("Datasets/DC3_data_pubmed_frequency.csv")
+# #select data based on conditions.
+pub = pd.read_csv("/CliniqIR/Datasets/DC3_data_pubmed_frequency.csv")
 IDF_dicts=dict(zip(pub.concept, pub.Frequency_across_Pubmed))
 pub=pub.loc[pub['Frequency_across_Pubmed'] >=100]
 unique_val=pub.concept.values.tolist()
@@ -231,4 +232,4 @@ data = Filter_Rows(data,unique_val)
 Collection_Size = 33000000
 data= Compute_Ranks_by_TFIDF(data,Collection_Size,IDF_dicts)
 
-mrr= getMRR(data,"TFIDF_Rank")
+mrr = getMRR(data, "TFIDF_Rank")
