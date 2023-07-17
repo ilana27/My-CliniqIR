@@ -1,6 +1,6 @@
-# CliniqIR: Unsupervised Diagnostic Decision Support via Information Retrieval
+# CliniqIR: Retrieval-Based Diagnostic Decision Support
 
-This is the repository for the paper Unsupervised Diagnostic Decision Support via Information Retrieval
+This is the repository for the paper Retrieval-Based Diagnostic Decision Support.
 
 ## Datasets
 1. Download [PubMed Abstracts](https://ftp.ncbi.nlm.nih.gov/pubmed/baseline/).
