@@ -204,7 +204,7 @@ def getMRR(df, Rankcol):
     return MRR
 
 
-df = pd.read_csv("Datasets/Filtered_DC3_Data.csv",encoding='latin-1')
+df = pd.read_csv("../Datasets/Filtered_DC3_Data.csv",encoding='latin-1')
 
 #read the results file
 data = pd.read_csv("CliniqIR_model/Query_Results.txt",sep = "\t", names = ['Abstract_Rank','PMID', 'AbstractTitle',"TF_SCORE","Concepts"])
