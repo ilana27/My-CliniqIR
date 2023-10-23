@@ -271,7 +271,7 @@ Final_test.to_csv("Mimic_test.csv")
 Final_test[["text","title"]].to_csv("test_data_zero_shot.csv",index=False)
 
 #Prepare input data for CliniqIR
-QueryTest = Final_test['text'].apply(lambda x: ' '.join(x.split()[1:701]))
-np.savetxt('CliniqIR_model/Queries.txt', QueryTest.values, fmt = "%s")
+QueryTest = Final_test['text'].apply(lambda x: ' '.join(x.split()[1:701])) # 701 words, if only working with ten DC3 notes, okay to use whole thing
+np.savetxt('CliniqIR_model/Queries.txt', QueryTest.values, fmt = "%s") #save it in a specific format to Queries.txt
 #Keep all columns for evaluating CliniqIR
 Final_test.to_csv("Mimic_test.csv")
